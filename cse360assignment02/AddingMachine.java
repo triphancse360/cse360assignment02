@@ -5,6 +5,7 @@ public class AddingMachine {
  * instant variable
  */
   private int total;
+  private String history = "0";
 /**
  * default constructor
  */
@@ -16,27 +17,34 @@ public class AddingMachine {
  * @return
  */
   public int getTotal () {
-    return 0;
+    return total;
   }
 /**
  * method to add value to total 
  * @param value
  */
   public void add (int value) {
+	  total = total + value;
+	  history += " + " + value;
   }
 /**
  * method to subtract value from total
  * @param value
  */
   public void subtract (int value) {
+	  total = total - value;
+	  history += " - " + value;
   }
 /**
  * method to get history
  */
   public String toString () {
-    return "";
+    return history + " ";
   }
-
+/**
+ * clear memory
+ */
   public void clear() {
+	  return ;
   }
 }
